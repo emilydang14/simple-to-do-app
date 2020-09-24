@@ -1,0 +1,99 @@
+.App {
+  flex-direction: column;
+  background-color: pink;
+  width: 80vw;
+  height: fit-content;
+  overflow: auto;
+  padding: 10px;
+}
+
+.Header {
+  color: #006d77;
+  font-family: "Lobster", cursive;
+  font-size: 5vw;
+}
+
+.Header-heading-1 {
+  text-shadow: 2px 2px 5px #83c5be;
+  text-align: center;
+}
+
+.todo-list-section {
+  flex-direction: column;
+  width: 90%;
+}
+
+/*Animation*/
+
+.fade-enter {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+.fade-enter-active {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-exit {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+  animation-duration: 1s;
+}
+.fade-exit-active {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}

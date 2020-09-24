@@ -1,0 +1,29 @@
+.creating-new-notes {
+  margin: 20px;
+  flex-direction: row;
+  width: 90%;
+}
+
+.input-notes {
+  width: 70%;
+  height: 30px;
+  border: none;
+  border-radius: 12px 12px;
+  margin-right: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+.adding-icon-container {
+  background-color: #006d77;
+  height: 30px;
+  width: 15%;
+  border-radius: 12px 12px;
+}
+
+.adding-icon-container:active {
+  transform: translateY(2px);
+}
+.adding-icon {
+  color: #83c5be;
+  font-size: 20px;
+}

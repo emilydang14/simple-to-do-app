@@ -1,0 +1,14 @@
+body {
+  background-color: #ffddd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

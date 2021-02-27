@@ -16,7 +16,12 @@
   align-items: flex-start;
   flex: 8;
 }
-
+.todo-info input {
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+}
 .todo-item-editing-buttons {
   display: flex;
   flex-direction: row;

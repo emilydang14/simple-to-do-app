@@ -33,24 +33,24 @@ class App extends Component {
     newToDoList[idNumber].id = idNumber + 1;
 
     //after create a new object and add it this new object to the toDoLisarray, we need to set the State of the newNote back to ""
-    this.setState(
-      {
-        toDoList: newToDoList,
-        newNote: "",
-      },
-      () => console.log(this.state) //console.log the new state that just updated
-    );
+    this.setState({
+      toDoList: newToDoList,
+      newNote: "",
+    });
   };
   //delete the note
   deleteNoteHandler = (index) => {
     const newToDoList = [...this.state.toDoList];
     newToDoList.splice(index, 1);
-    this.setState({ toDoList: newToDoList }, () => console.log(this.state));
+    this.setState({ toDoList: newToDoList });
   };
 
-  //complete note
-  completeTaskHandler = () => {};
-
+  //change note
+  changeNoteHandler = (e, index) => {
+    const newToDoList = [...this.state.toDoList];
+    newToDoList[index].note = e.target.value;
+    this.setState({ toDoList: newToDoList });
+  };
   render() {
     const toDoList = this.state.toDoList.length >= 0 && (
       <div className="todo-list-section centered">
@@ -62,6 +62,7 @@ class App extends Component {
                 serialNumber={index + 1}
                 info={note.note}
                 delete={() => this.deleteNoteHandler(index)}
+                onChange={(e) => this.changeNoteHandler(e, index)}
               />
             </CSSTransition>
           ))}
@@ -71,12 +72,13 @@ class App extends Component {
     return (
       <div className="App centered">
         <Header />
-        {toDoList}
+
         <CreatingNewNotes
           value={this.state.newNote}
           change={(event) => this.newNoteChangeHandler(event)}
           submit={this.addingNewNote}
         />
+        {toDoList}
       </div>
     );
   }

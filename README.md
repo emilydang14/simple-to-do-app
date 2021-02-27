@@ -16,7 +16,7 @@ You can:
 2. Editing existing notes
 3. Delete notes
 
-<img src="https://github.com/emilydang14/simple-to-do-app/blob/master/demo.gif" width="300">
+<img src="https://github.com/emilydang14/simple-to-do-app/blob/master/demo.gif" width="500">
 
 ## How to start the application on your computer:
 
